@@ -1,4 +1,5 @@
 price(0).
+done(false).
 
 !start.
 
@@ -11,10 +12,18 @@ price(0).
 
 
 +!speak : price(P) &
-          NEW = P + math.round(P * 0.1) 
+          NEW = P + math.round(P * 0.1)  &
+          done(false)
           <-
-            .print("Price is ", P).
+            .print("Price is ", P);
             .send(arena, achieve, price(P));
             -+price(NEW);
             .wait(1000);
             !speak.
+
++!speak <-
+            .wait(1).
+
++!finished <-
+            -+done(true);
+            .print("Done").
