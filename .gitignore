@@ -18,3 +18,10 @@
 *.zip
 *.tar.gz
 *.rar
+
+
+.classpath
+.project
+
+.gradle/
+.settings/
