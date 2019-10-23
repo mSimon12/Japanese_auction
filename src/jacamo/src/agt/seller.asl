@@ -2,26 +2,25 @@
 { include("$jacamoJar/templates/common-moise.asl") }
 { include("$jacamoJar/templates/org-obedient.asl") }
 
-done(false).
-
-!start.
-
 +!start :   .random(R) & 
-            MIN = math.round(100 * R)
+            MIN = 10 + math.round(100 * R)
             <-  .print("Price starts at ", MIN);
-                start(MIN);
-                .wait(1000);
-                !run.
+                start(MIN).
 
 +!run : price(P) & INC = math.round(P * 0.1) &
         count(C) & C>1
           <- inc(INC);
              .print("Price: ", P);
-             .wait(1000);
-             !run.
+             .wait(100);
+             !run. // A organização verifica se existe o desejo???
 
 +!run : count(C) & C==1
-        <- winner(W);
-            .print(W, " won.").
+        <-
+            .print("Finished").
+            //goalAchieved(run). ???
+
 
 +!run.
+
++!announce <-  winner(W);
+            .print(W, " won.").

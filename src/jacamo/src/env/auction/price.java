@@ -14,7 +14,6 @@ public class price extends Artifact {
 
     @OPERATION void start(int value){
         this.defineObsProperty("price",value);
-        signal("startPrice");
     }
 
     @OPERATION void inc(int value){

@@ -14,14 +14,14 @@ in(false).
                 .print("I have: ", M).
 
 
-+startPrice : price(P) & money(M) &
++!decide : price(P) & money(M) &
                   P < M & .my_name(N)
                   <-
                     .print("Joining");
                     -+in(true);
                     join(N).
 
-+startPrice <-
++!decide <-
                 .print("I wont join").
 
 

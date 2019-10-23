@@ -83,9 +83,10 @@ mas auction_JACAMO{
     // Organisation 
     organisation auction: auction.xml {       // the organisational entity is auction from spec auction.xml
     	group arena_auc: arena {          // instance group (jacamo_team) from spec team
+            responsible-for: auction_inst
     		players: seller seller,          // the roles of the agents in this group
     		         john buyer,
-                     /*ana buyer,
+                     ana buyer,
                      tom buyer,
                      maria buyer,
                      carlos buyer,
@@ -93,9 +94,12 @@ mas auction_JACAMO{
                      joana buyer,
                      fred buyer,
                      rita buyer,
-                     mike buyer*/
+                     mike buyer
     		debug                          // starts the organisational inspector
     	}
+        scheme auction_inst : auction_sch{
+            debug
+        }
     }
 
 }

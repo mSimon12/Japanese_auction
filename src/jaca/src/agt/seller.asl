@@ -2,12 +2,10 @@
 { include("$jacamoJar/templates/common-moise.asl") }
 { include("$jacamoJar/templates/org-obedient.asl") }
 
-done(false).
-
 !start.
 
 +!start :   .random(R) & 
-            MIN = math.round(100 * R)
+            MIN = 10 + math.round(100 * R)
             <-  .print("Price starts at ", MIN);
                 start(MIN);
                 .wait(1000);
@@ -17,7 +15,7 @@ done(false).
         count(C) & C>1
           <- inc(INC);
              .print("Price: ", P);
-             .wait(1000);
+             .wait(100);
              !run.
 
 +!run : count(C) & C==1

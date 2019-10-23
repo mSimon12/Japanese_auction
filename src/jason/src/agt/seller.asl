@@ -4,7 +4,7 @@ done(false).
 !start.
 
 +!start :   .random(R) & 
-            MIN = math.round(100 * R)
+            MIN = 10 + math.round(100 * R)
             <- 
                 -+price(MIN);
                 .print("Price starts at ", MIN);
@@ -18,7 +18,7 @@ done(false).
             .print("Price is ", P);
             .send(arena, achieve, price(P));
             -+price(NEW);
-            .wait(1000);
+            .wait(100);
             !speak.
 
 +!speak <-
