@@ -1,0 +1,61 @@
+/*
+    JaCaMo project file
+*/
+
+mas auction_JA{
+
+    // Agents initialization
+    agent seller: seller.asl{
+        focus: arena.auction
+    } 
+
+    agent john: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent ana: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent tom: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent maria: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent carlos: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent bob: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent joana: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent fred: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent rita: buyer.asl{
+        focus: arena.auction
+    }
+
+    agent mike: buyer.asl{
+        join: arena
+    }  
+    
+    // Environment workspaces
+
+     workspace arena {
+    	artifact : price()
+        artifact : buyers()
+    }
+
+    // Organisation 
+
+}

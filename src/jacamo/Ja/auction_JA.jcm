@@ -1,0 +1,28 @@
+/*
+    JaCaMo project file
+*/
+
+mas auction_JA{
+
+    // Agents initialization
+    agent arena:arena.asl
+
+    agent seller: seller.asl
+
+    agent john: buyer.asl 
+    agent ana: buyer.asl
+    agent tom: buyer.asl 
+    agent maria: buyer.asl 
+    agent carlos: buyer.asl 
+    agent bob: buyer.asl
+    agent joana: buyer.asl 
+    agent fred: buyer.asl 
+    agent rita: buyer.asl 
+    agent mike: buyer.asl 
+    
+    // Environment workspaces
+
+
+    // Organisation 
+
+}
