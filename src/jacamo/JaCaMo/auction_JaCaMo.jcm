@@ -2,7 +2,7 @@
     JaCaMo project file
 */
 
-mas auction_JA{
+mas auction_JACAMO{
 
     // Agents initialization
     agent seller: seller.asl{
@@ -79,5 +79,23 @@ mas auction_JA{
     }
 
     // Organisation 
+
+    // Organisation 
+    organisation auction: auction.xml {       // the organisational entity is auction from spec auction.xml
+    	group arena_auc: arena {          // instance group (jacamo_team) from spec team
+    		players: seller seller,          // the roles of the agents in this group
+    		         john buyer,
+                     /*ana buyer,
+                     tom buyer,
+                     maria buyer,
+                     carlos buyer,
+                     bob buyer,
+                     joana buyer,
+                     fred buyer,
+                     rita buyer,
+                     mike buyer*/
+    		debug                          // starts the organisational inspector
+    	}
+    }
 
 }
