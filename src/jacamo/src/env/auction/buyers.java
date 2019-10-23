@@ -9,7 +9,6 @@ public class buyers extends Artifact {
     private ArrayList<String> members = new ArrayList();
 
     void init() {
-        // creates an observable property called numMsg
         this.defineObsProperty("count", members.size());
     }
 
